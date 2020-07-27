@@ -5,7 +5,7 @@ Promise.all([
     faceapi.nets.faceLandmark68Net.loadFromUri('/models'),
     faceapi.nets.faceRecognitionNet.loadFromUri('/models'),
     faceapi.nets.faceExpressionNet.loadFromUri('/models')
-]).then(startVideo)
+])
 
 function startVideo() {
     navigator.getUserMedia(
@@ -14,6 +14,16 @@ function startVideo() {
       err => console.error(err)
     )
   }
+
+  function turnCameraOff()
+{
+    
+}
+
+function turnCameraOn()
+{
+    startVideo();
+}
 
 video.addEventListener('playing', () => {
     const canvas = faceapi.createCanvasFromMedia(video)
