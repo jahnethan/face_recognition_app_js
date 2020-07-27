@@ -1,24 +1,39 @@
-body{
-    margin: 0;
-    padding: 0;
+*{
     box-sizing: border-box;
+}
+
+h1{
+    margin-bottom: 15px;
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+    width: 100%;
+    height: auto;
+   
+}
+.row {
+    width: 100%;
+    align-content: center;
+    
+}
+body{
+    margin: 10px;
+    padding: 10px;
     width: 100vw;
     height: 100vh;
-    display: flex;
     justify-content: center;
-    align-items: center;
-
 }
 
 video{
     border: 1px solid black;
-    clear: both;
-}
+    width: 100%;
+    position: relative;
+    align-self: center;
 
+}
 
 #btn_on , #btn_off
 {
-    position: relative;
+
   background-color: #4CAF50; /* Green */
   border: none;
   color: white;
@@ -27,7 +42,6 @@ video{
   text-decoration: none;
   font-size: 16px;
   border: 1px solid black;
-  top: 80px;
-  right: 80px;
+  
   
 }
