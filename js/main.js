@@ -1,14 +1,14 @@
 const video = document.getElementById("video");
 
 Promise.all([
-    faceapi.nets.tinyFaceDetector.loadFromUri('https://github.com/jahnethan/face_recognition_app_js/blob/gh-pages/models'),
-    faceapi.nets.faceLandmark68Net.loadFromUri('https://github.com/jahnethan/face_recognition_app_js/blob/gh-pages/models'),
-    faceapi.nets.faceRecognitionNet.loadFromUri('https://github.com/jahnethan/face_recognition_app_js/blob/gh-pages/models'),
-    faceapi.nets.faceExpressionNet.loadFromUri('https://github.com/jahnethan/face_recognition_app_js/blob/gh-pages/models')
+    faceapi.nets.tinyFaceDetector.loadFromUri('/models'),
+    faceapi.nets.faceLandmark68Net.loadFromUri('/models'),
+    faceapi.nets.faceRecognitionNet.loadFromUri('/models'),
+    faceapi.nets.faceExpressionNet.loadFromUri('/models')
 ]).then(startVideo)
 
 function startVideo() {
-    navigator.mediaDevices.getUserMedia(
+    navigator.getUserMedia(
       { video: {} },
       stream => video.srcObject = stream,
       err => console.error(err)
